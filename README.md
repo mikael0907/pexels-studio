@@ -101,7 +101,7 @@ VITE_PEXELS_API_KEY=your_pexels_api_key_here
 npm run dev
 ```
 
-Visit: [http://localhost:5173](http://localhost:5173)
+Visit: [https://pexels-studio.netlify.app](https://pexels-studio.netlify.app)
 
 ---
 
@@ -149,7 +149,7 @@ npm run preview
 
 ## 📄 License
 
-This project is open-source and available under the [MIT License](LICENSE).
+This project is open-source and available under the [MIT License](https://opensource.org/license/mit).
 
 ---
 
