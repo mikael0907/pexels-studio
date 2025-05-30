@@ -34,9 +34,9 @@ Pexels Studio is a sleek photo browsing and search application built with **Reac
 
 ## 📸 Screenshots
 
-| Home Page                                                | Favorites Page                                                     |
-| -------------------------------------------------------- | ------------------------------------------------------------------ |
-| ![home](../pexels-studio/src/assets/home-screenshot.png) | ![favorites](../pexels-studio/src/assets/favorites-screenshot.png) |
+| Home Page                                | Favorites Page                                     |
+| ---------------------------------------- | -------------------------------------------------- |
+| ![home](screenshots/home-screenshot.png) | ![favorites](screenshots/favorites-screenshot.png) |
 
 ---
 
@@ -49,8 +49,8 @@ src/
 │ ├── MasonryGrid.tsx
 │ ├── PhotoCard.tsx
 │ └── SearchBar.tsx
-├── context/ # Zustand store & types
-│ └── useFavorites.ts (or store.ts)
+├── stores/ # Zustand store & types
+│ └── useFavoritesStore.ts
 ├── hooks/ # Custom hooks
 │ └── usePexelsApi.ts
 ├── pages/ # Pages for routing
@@ -71,7 +71,7 @@ src/
 ### 1. Clone the Repo
 
 ```bash
-git clone https://github.com/yourusername/pexels-studio.git
+git clone https://github.com/mikael0907/pexels-studio
 cd pexels-studio
 ````
 
@@ -179,11 +179,5 @@ Built by Chisom. https://github.com/mikael0907/
 
 ---
 
-### ✅ Next Steps
 
-- Replace placeholder links like `yourusername`, live demo, and screenshots.
-- Make sure your `VITE_PEXELS_API_KEY` is not committed to GitHub (add `.env` to `.gitignore`).
-- Add a `LICENSE` file (MIT recommended).
-
-Let me know if you want me to generate screenshots, GitHub Actions CI config, or a deployment guide (Netlify/Vercel).
 ```
