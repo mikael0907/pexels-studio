@@ -1,0 +1,53 @@
+.container {
+  padding: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.title {
+  font-size: 28px;
+  color: #333;
+  margin: 0;
+}
+
+.clearButton {
+  background: #ff4d4d;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.2s;
+}
+
+.clearButton:hover {
+  background: #e60000;
+}
+
+.emptyState {
+  text-align: center;
+  padding: 40px;
+  color: #666;
+  font-size: 16px;
+}
+
+.emptyState p {
+  margin: 8px 0;
+}
+
+.homeLink {
+  text-decoration: none;
+  color: white;
+  background-color: #007aff;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  display: inline-block;
+}
