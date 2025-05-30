@@ -34,9 +34,9 @@ Pexels Studio is a sleek photo browsing and search application built with **Reac
 
 ## 📸 Screenshots
 
-| Home Page                                | Favorites Page                                     |
-| ---------------------------------------- | -------------------------------------------------- |
-| ![home](screenshots/home-screenshot.png) | ![favorites](screenshots/favorites-screenshot.png) |
+| Home Page                                  | Favorites Page                                       |
+| ------------------------------------------ | ---------------------------------------------------- |
+| ![home](./screenshots/home-screenshot.png) | ![favorites](./screenshots/favorites-screenshot.png) |
 
 ---
 
@@ -66,14 +66,14 @@ src/
 
 ---
 
-### 🔧 Setup & Installation
+## 🔧 Setup & Installation
 
 ### 1. Clone the Repo
 
 ```bash
 git clone https://github.com/mikael0907/pexels-studio
 cd pexels-studio
-```
+````
 
 ### 2. Install Dependencies
 
@@ -181,4 +181,7 @@ Built by Chisom. https://github.com/mikael0907/
 
 
 ```
-````
+
+```
+
+```
