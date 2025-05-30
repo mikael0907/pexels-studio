@@ -66,14 +66,14 @@ src/
 
 ---
 
-## 🔧 Setup & Installation
+### 🔧 Setup & Installation
 
 ### 1. Clone the Repo
 
 ```bash
 git clone https://github.com/mikael0907/pexels-studio
 cd pexels-studio
-````
+```
 
 ### 2. Install Dependencies
 
@@ -181,3 +181,4 @@ Built by Chisom. https://github.com/mikael0907/
 
 
 ```
+````
