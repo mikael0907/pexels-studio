@@ -1,54 +1,189 @@
-# React + TypeScript + Vite
+### 📄 `README.md`
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+```md
+# 📷 Pexels Studio - A Beautiful Photo Search App
 
-Currently, two official plugins are available:
+Pexels Studio is a sleek photo browsing and search application built with **React**, **TypeScript**, **Zustand** for state management, and the **Pexels API**. Users can search, filter, favorite, and view high-resolution images in a **responsive masonry layout**, similar to the real Pexels experience.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## 🚀 Features
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- 🔍 **Search Photos** using the Pexels API
+- 🎨 **Filter by color** and **orientation** (portrait, landscape, square)
+- ❤️ **Favorite photos** with persistent state using `localStorage`
+- 🧱 **Masonry grid layout** for displaying images
+- 📱 **Responsive UI** (mobile & desktop friendly)
+- 🧭 **Routing** with React Router (Home & Favorites pages)
+- ⚙️ **Zustand** for global state and `localStorage` persistence
+- 🔁 **Load More** functionality for infinite scrolling
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+---
+
+## 🛠 Tech Stack
+
+| Technology         | Purpose                               |
+| ------------------ | ------------------------------------- |
+| React + TypeScript | Frontend UI and typings               |
+| Zustand            | Global state management + persistence |
+| React Router       | Client-side routing                   |
+| CSS Modules        | Component-scoped styling              |
+| Pexels API         | Photo data & image assets             |
+
+---
+
+## 📸 Screenshots
+
+| Home Page                                                | Favorites Page                                                     |
+| -------------------------------------------------------- | ------------------------------------------------------------------ |
+| ![home](../pexels-studio/src/assets/home-screenshot.png) | ![favorites](../pexels-studio/src/assets/favorites-screenshot.png) |
+
+---
+
+## 🧩 Project Structure
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+src/
+├── components/ # Reusable UI components
+│ ├── Filters.tsx
+│ ├── MasonryGrid.tsx
+│ ├── PhotoCard.tsx
+│ └── SearchBar.tsx
+├── context/ # Zustand store & types
+│ └── useFavorites.ts (or store.ts)
+├── hooks/ # Custom hooks
+│ └── usePexelsApi.ts
+├── pages/ # Pages for routing
+│ ├── HomePage.tsx
+│ └── FavoritesPage.tsx
+├── utils/ # Utilities
+│ └── debounce.ts
+├── App.tsx # Routes setup
+├── main.tsx # App entry point
+└── index.css
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+````
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+---
+
+## 🔧 Setup & Installation
+
+### 1. Clone the Repo
+
+```bash
+git clone https://github.com/yourusername/pexels-studio.git
+cd pexels-studio
+````
+
+### 2. Install Dependencies
+
+```bash
+npm install
+```
+
+### 3. Get Your Pexels API Key
+
+- Visit [https://www.pexels.com/api/](https://www.pexels.com/api/)
+- Create an account or log in
+- Generate your API key
+
+### 4. Create `.env` File
+
+Create a `.env` file in the root with:
+
+```env
+VITE_PEXELS_API_KEY=your_pexels_api_key_here
+```
+
+### 5. Start the Dev Server
+
+```bash
+npm run dev
+```
+
+Visit: [http://localhost:5173](http://localhost:5173)
+
+---
+
+## 💡 Usage
+
+- Search photos using the top bar.
+- Use filters to narrow results by color or orientation.
+- Click the 🤍 icon to favorite a photo. It will turn red ❤️.
+- Visit the **Favorites Page** by clicking the "❤️ View Favorites" button.
+- All favorites are saved in your browser via `localStorage`.
+
+---
+
+## 📦 Build for Production
+
+```bash
+npm run build
+```
+
+To preview the production build:
+
+```bash
+npm run preview
+```
+
+---
+
+## 🧠 How Favorites Work
+
+- Favorites are stored globally using [Zustand](https://github.com/pmndrs/zustand).
+- Zustand is configured with persistence middleware so that:
+
+  - The state is saved in `localStorage`
+  - Your favorites stay even after refresh or closing the tab
+
+---
+
+## ✨ Credits
+
+- [Pexels](https://www.pexels.com) for the API and beautiful images
+- [Zustand](https://github.com/pmndrs/zustand) for lightweight global state
+- [React Router](https://reactrouter.com) for routing
+
+---
+
+## 📄 License
+
+This project is open-source and available under the [MIT License](LICENSE).
+
+---
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome!
+
+1. Fork the project
+2. Create your feature branch (`git checkout -b feature/awesome`)
+3. Commit your changes (`git commit -m 'Add something cool'`)
+4. Push to the branch (`git push origin feature/awesome`)
+5. Open a Pull Request
+
+---
+
+## 🌐 Live Demo
+
+> Coming soon...
+
+---
+
+## 🙋‍♂️ Author
+
+Built by Chisom. https://github.com/mikael0907/
+
+```
+
+---
+
+### ✅ Next Steps
+
+- Replace placeholder links like `yourusername`, live demo, and screenshots.
+- Make sure your `VITE_PEXELS_API_KEY` is not committed to GitHub (add `.env` to `.gitignore`).
+- Add a `LICENSE` file (MIT recommended).
+
+Let me know if you want me to generate screenshots, GitHub Actions CI config, or a deployment guide (Netlify/Vercel).
 ```
